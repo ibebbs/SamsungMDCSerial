@@ -1,0 +1,117 @@
+﻿namespace SamsungMDCSerial
+{
+    public static class Command
+    {
+        public const byte StatusControl = 0x00;
+        public const byte TimeControl = 0x01;
+        public const byte OnTimeControl = 0x02;
+        public const byte OffTimeControl = 0x03;
+        public const byte VideoControl = 0x04;
+        public const byte AudioControl = 0x05;
+        public const byte RGBControl = 0x06;
+        public const byte PIPStatusControl = 0x07;
+        public const byte MaintenanceControl = 0x08;
+        public const byte SoundControl = 0x09;
+        public const byte SerialNumberControl = 0x0B;
+        public const byte DisplayStatusControl = 0x0D;
+        public const byte SoftwareVersionControl = 0x0E;
+        public const byte AutoMotionPlus = 0x0F;
+        public const byte ModelNumberControl = 0x10;
+        public const byte PowerControl = 0x11;
+        public const byte VolumeControl = 0x12;
+        public const byte MuteControl = 0x13;
+        public const byte InputSourceControl = 0x14;
+        public const byte PicturesizesControl = 0x15;
+        public const byte DirectChannelControl = 0x17;
+        public const byte ScreenModeControl = 0x18;
+        public const byte ScreenSizeControl = 0x19;
+        public const byte RedOffsetControl = 0x1A;
+        public const byte SharpnessControl = 0x26;
+        public const byte ColorControl = 0x27;
+        public const byte TintControl = 0x28;
+        public const byte RedGainControl = 0x29;
+        public const byte GreenGainControl = 0x2A;
+        public const byte BlueGainControl = 0x2B;
+        public const byte TrebleControl = 0x2C;
+        public const byte BassControl = 0x2D;
+        public const byte CoarseControl = 0x2F;
+        public const byte FineControl = 0x30;
+        public const byte HPositionControl = 0x31;
+        public const byte VPositionControl = 0x32;
+        public const byte AutoPowerControl = 0x33;
+        public const byte ClearMenuControl = 0x34;
+        public const byte RemoteControl = 0x36;
+        public const byte RGBContrastControl = 0x37;
+        public const byte RGBBrightnessControl = 0x38;
+        public const byte PIPOnOffControl = 0x3C;
+        public const byte AutoAdjustmentControl = 0x3D;
+        public const byte ColorToneControl = 0x3E;
+        public const byte ColorTemperatureControl = 0x3F;
+        public const byte PIPSourceControl = 0x40;
+        public const byte PIPSwapControl = 0x41;
+        public const byte PIPSizeControl = 0x42;
+        public const byte PIPLocateControl = 0x43;
+        public const byte FanSpeedSetting = 0x44;
+        public const byte UserAutoColorControl = 0x45;
+        public const byte EQ100HzControl = 0x51;
+        public const byte EQ300HzControl = 0x52;
+        public const byte EQ1kHzControl = 0x53;
+        public const byte EQ3kHzControl = 0x54;
+        public const byte EQ10kHzControl = 0x55;
+        public const byte AutoLampControl = 0x57;
+        public const byte ManualLampControl = 0x58;
+        public const byte SafetyScreenRunControl = 0x59;
+        public const byte SafetyScreenControl = 0x5B;
+        public const byte VideoWallModeControl = 0x5C;
+        public const byte SafetyLock = 0x5D;
+        public const byte ButtonLock = 0x5F;
+        public const byte ChannelUpDown = 0x61;
+        public const byte OSDOnOff = 0x70;
+        public const byte PModeControl = 0x71;
+        public const byte SModeControl = 0x72;
+        public const byte NRModeSet = 0x73;
+        public const byte PCColorToneControl = 0x75;
+        public const byte AutoAutoAdjustmentEnableDisable = 0x76;
+        public const byte AllKeysLock = 0x77;
+        public const byte SRSTSXTControl = 0x78;
+        public const byte FilmMode = 0x79;
+        public const byte SignalBalance = 0x7A;
+        public const byte SBGain = 0x7E;
+        public const byte SBRedGain = 0x7B;
+        public const byte SBGreenGain = 0x7C;
+        public const byte SBBlueGain = 0x7D;
+        public const byte SBSharpness = 0x7F;
+        public const byte PanelOnTime = 0x83;
+        public const byte VideoWallOn = 0x84; 
+        public const byte TemperatureControl = 0x85;
+        public const byte BrightnessSensor = 0x86;
+        public const byte DynamicContrast = 0x87;
+        public const byte SafetyScreenOn = 0x88;
+        public const byte VideoWallUserControl = 0x89;
+        public const byte ModelName = 0x8A;
+        public const byte FanControl = 0x8F;
+        public const byte EnergySaving = 0x92;
+        public const byte HDMIBlackLevelControl = 0x94;
+        public const byte GammaControl = 0x96;
+        public const byte EdgeEnhancement = 0x9C;
+        public const byte ColorSpace = 0x9D;
+        public const byte XVYCC = 0x9E;
+        public const byte ResetControl = 0x9F;
+        public const byte AmbientBrightnessSensor = 0xA1;
+        public const byte RJ45SettingRefresh = 0xA2;
+        public const byte OSDTypeDisplayControl = 0xA3;
+        public const byte Timer1Control = 0xA4;
+        public const byte Timer2Control = 0xA5;
+        public const byte Timer3Control = 0xA6;
+        public const byte ClockControl = 0xA7;
+        public const byte HolidayAddDeleteControl = 0xA8;
+        public const byte HolidayGetControl = 0xA9;
+        public const byte PanelOnOff = 0xF9;
+    }
+
+    public static class Power
+    {
+        public const byte Off = 0x00;
+        public const byte On = 0x01;
+    }
+}
