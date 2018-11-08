@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SamsungMDCSerial": {
+      "commandName": "Project",
+      "commandLineArgs": "on -c COM4 -i 0"
+    }
+  }
+}
