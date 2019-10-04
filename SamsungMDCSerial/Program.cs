@@ -1,6 +1,7 @@
 ﻿using CommandLine;
 using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 
 namespace SamsungMDCSerial
@@ -38,10 +39,18 @@ namespace SamsungMDCSerial
 
         private static System.IO.Ports.SerialPort OpenPort(string comPort)
         {
-            var port = new System.IO.Ports.SerialPort(comPort, 9800, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
-            port.Open();
+            try
+            {
+                var port = new System.IO.Ports.SerialPort(comPort, 9600, System.IO.Ports.Parity.None, 8, System.IO.Ports.StopBits.One);
+                port.Open();
 
-            return port;
+                return port;
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine($"Encountered ArgumentException '{e.Message}' due to parameter '{e.ParamName}'");
+                throw;
+            }
         }
 
         private static int TurnOn(On opts)
@@ -71,14 +80,35 @@ namespace SamsungMDCSerial
                 return 0;
             }
         }
+        private static int ListPorts(List opts)
+        {
+            var serialPorts = SerialPort.GetPortNames();
+
+            if (serialPorts.Any())
+            {
+                Console.WriteLine("The following serial ports were found:");
+
+                foreach (var port in serialPorts)
+                {
+                    Console.WriteLine($"  {port}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No serial ports were found");
+            }
+
+            return 0;
+        }
 
         static int Main(string[] args)
         {
             return Parser.Default
-                .ParseArguments<On, Off>(args)
+                .ParseArguments<On, Off, List>(args)
                 .MapResult(
                     (On opts) => TurnOn(opts),
                     (Off opts) => TurnOff(opts),
+                    (List opts) => ListPorts(opts),
                     errs => 1);
         }
     }

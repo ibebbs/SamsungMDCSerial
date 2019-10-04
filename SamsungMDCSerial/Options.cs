@@ -19,4 +19,10 @@ namespace SamsungMDCSerial
 
     [Verb("off")]
     public class Off : Options { }
+
+    [Verb("list")]
+    public class List
+    {
+
+    }
 }
